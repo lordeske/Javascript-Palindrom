@@ -20,13 +20,13 @@
             
             if (first==last)
             {
-                log.innerText= firstv1 + "  is Palindrome";
+                log.innerText= firstv1 + "  is a Palindrome";
                 return true;
                 
             }
             else
             {
-                log.innerText= firstv1 + " is NOT Palindrome";
+                log.innerText= firstv1 + " is NOT a Palindrome";
             }
 
             word.value= "";  //Claer input
