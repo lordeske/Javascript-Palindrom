@@ -1,36 +1,38 @@
-const word = document.getElementById("text-input");
-const button = document.getElementById("check-btn");
-const log = document.getElementById("result")
+    const word = document.getElementById("text-input");
+    const button = document.getElementById("check-btn");
+    const log = document.getElementById("result")
 
-button.addEventListener("click", ()=>{
+    button.addEventListener("click", ()=>{
 
-    log.innerText="";
+        log.innerText="";
 
-    if(word.value === "")
-    {
-        alert("Please input a value");
-        
-    }
-    else
-    {
-        let first = word.value.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
-        let last = first.split("").reverse().join("");
-        
-        
-        if (first==last)
+        if(word.value === "")
         {
-            log.innerText= first + "  is Palindrome";
-            return true;
+            alert("Please input a value");
             
         }
         else
         {
-            log.innerText= first + " is NOT Palindrome";
+            let firstv1 = word.value;
+            let first = word.value.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
+            let last = first.split("").reverse().join("");
+            
+            
+            if (first==last)
+            {
+                log.innerText= firstv1 + "  is Palindrome";
+                return true;
+                
+            }
+            else
+            {
+                log.innerText= firstv1 + " is NOT Palindrome";
+            }
+
+            word.value= "";  //Claer input
+
         }
 
-        word.value= "";  //Claer input
-
-    }
 
 
 
@@ -38,8 +40,7 @@ button.addEventListener("click", ()=>{
 
 
 
-
-})
+    })
 
 
 
