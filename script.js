@@ -13,9 +13,24 @@ button.addEventListener("click", ()=>{
     }
     else
     {
-        let first = word.value
+        let first = word.value.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
+        console.log(first);
         let last = first.split("").reverse().join("");
-        console.log(last)
+        console.log(last);
+        
+        if (first==last)
+        {
+            log.innerText= first + "  is Palindrome";
+            return true;
+            
+        }
+        else
+        {
+            log.innerText= first + " is NOT Palindrome";
+        }
+
+        word.value= "";
+
     }
 
 
